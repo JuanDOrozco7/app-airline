@@ -2,8 +2,8 @@ import datetime
 from enum import Enum
 from pydantic import BaseModel
 
-from catalog.schema import Catalog
-from user.schema import User
+from app.catalog.schema import Catalog
+from app.user.schema import User
 
 
 class BookingStatus(str, Enum):

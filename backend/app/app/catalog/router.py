@@ -2,11 +2,11 @@ import datetime
 from fastapi import APIRouter, FastAPI, Depends, status, Response, HTTPException
 from sqlalchemy.orm import Session
 from typing import Any, List
-from database import db
-from core import security
+from app.database import db
+from app.core import security
 from . import schema
 from . import services
-from user import schema as user_schema
+from app.user import schema as user_schema
 
 api_router = APIRouter(tags = ["catalog"])
 

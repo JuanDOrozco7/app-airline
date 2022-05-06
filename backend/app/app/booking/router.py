@@ -2,14 +2,14 @@ from fastapi import APIRouter, FastAPI, Depends, status, Response, HTTPException
 from sqlalchemy.orm import Session
 from typing import Any, List
 
-from core import security
-from database import db
+from app.core import security
+from app.database import db
 from . import schema
 from . import services
 from . import validator
-from catalog import validator as catalog_validator
-from user import validator as user_validator
-from user import schema as user_schema
+from app.catalog import validator as catalog_validator
+from app.user import validator as user_validator
+from app.user import schema as user_schema
 
 
 api_router = APIRouter(tags = ["booking"])

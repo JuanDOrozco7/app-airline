@@ -1,10 +1,11 @@
 from anyio import Any
 from fastapi import Depends, HTTPException, status, APIRouter
 from sqlalchemy.orm import Session
-from core.security import create_access_token
-from database import db
+from app.core.security import create_access_token
+from app.database import db
 from fastapi.security import OAuth2PasswordRequestForm
-from user.services import authenticate
+
+from app.user.services import authenticate
 
 
 api_router = APIRouter(tags=['Auth'])

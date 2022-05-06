@@ -1,7 +1,7 @@
 from typing import List
 from sqlalchemy.orm import Session
-from booking.models import Booking
-from user import models as user_models
+from app.booking.models import Booking
+from app.user import models as user_models
 from . import schema
 
 

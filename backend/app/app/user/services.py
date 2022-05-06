@@ -6,8 +6,8 @@ from sqlalchemy.orm import Session
 from . import validator
 from . import models
 from . import schema
-from booking.models import Booking
-from core import hashing
+from app.booking.models import Booking
+from app.core import hashing
 
 async def new_user_register(user_in: schema.UserCreate,
                             db_session: Session) -> models.User:

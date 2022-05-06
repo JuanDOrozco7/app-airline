@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from auth import router as auth_router
-from booking import router as booking_router
-from catalog import router as catalog_router
-from user import router as user_router
-from database import models
+from app.auth import router as auth_router
+from app.booking import router as booking_router
+from app.catalog import router as catalog_router
+from app.user import router as user_router
+from app.database import models
 
 app = FastAPI(title="Airline Booking", version = "1.0")
 

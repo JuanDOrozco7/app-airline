@@ -3,8 +3,8 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 import datetime
 
-from catalog.models import Flight
-from booking.models import Booking
+from app.catalog.models import Flight
+from app.booking.models import Booking
 from . import schema
 
 async def get_all_catalogs(departureAirportCode : str, arrivalAirportCode : str,

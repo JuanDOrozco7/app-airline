@@ -10,10 +10,11 @@ fastapi = "^0.76.0"
 uvicorn = {extras = ["standard"], version = "^0.17.6"}
 SQLAlchemy = "^1.4.36"
 alembic = "^1.7.7"
-psycopg2-binary = "^2.9.3"
 passlib = {extras = ["argon2"], version = "^1.7.4"}
 python-jose = "^3.3.0"
 python-multipart = "^0.0.5"
+psycopg2-binary = "^2.9.3"
+argon2-cffi = "^21.3.0"
 
 [tool.poetry.dev-dependencies]
 

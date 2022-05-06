@@ -3,8 +3,8 @@ from typing import List
 from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
 
-from database import db
-from core import security
+from app.database import db
+from app.core import security
 
 from . import schema
 from . import services

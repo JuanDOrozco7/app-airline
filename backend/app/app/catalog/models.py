@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship
-from database.session import Base
+from app.database.session import Base
 
 class Flight(Base):
     __tablename__ = "flights"
