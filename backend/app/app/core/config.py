@@ -1,22 +1,17 @@
 from pydantic import BaseSettings
 from functools import lru_cache
-import os
-from os.path import dirname
-from dotenv import load_dotenv
 
 class Settings(BaseSettings):
 
-    load_dotenv(f"{dirname(__file__)}/settings.env") # change this to your .env file path
-
-    DATABASE_USERNAME : str = os.getenv('DATABASE_USERNAME')
-    DATABASE_PASSWORD : str = os.getenv('DATABASE_PASSWORD')
-    DATABASE_HOST : str = os.getenv('DATABASE_HOST')
-    DATABASE_PORT : str = int(os.getenv('DATABASE_PORT'))
-    DATABASE_NAME : str = os.getenv('DATABASE_NAME')
+    DATABASE_USERNAME : str = 'postgres'
+    DATABASE_PASSWORD : str = '123123'
+    DATABASE_HOST : str = 'localhost'
+    DATABASE_PORT : str = '6548'
+    DATABASE_NAME : str = 'mydb'
 
     DATABASE_URI : str = f"postgresql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
     ACCESS_TOKEN_EXPIRE_MINUTES : int = 60 * 24 * 5  # 60 * 24 * 5 = 5 days
-    SECRET_KEY : str = os.getenv('SECRET_KEY')
+    SECRET_KEY : str = '5ZhRhFEwqLrIwGdc11bpzWPlP24Xwc6n'
     ALGORITHM : str = "HS512"
     
     class Config:

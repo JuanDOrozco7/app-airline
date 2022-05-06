@@ -14,8 +14,6 @@ async def get_all_catalogs(departureAirportCode : str, arrivalAirportCode : str,
                                               Flight.departureDate == departureDate).all()
     return flights
 
-async def get_all_catalogsa(db_session : Session) -> List[Flight]: 
-    return db_session.query(Flight).all()
 
 async def get_catalog_by_airportCode(airportCode : str,
                                      departureDate: datetime.datetime,
