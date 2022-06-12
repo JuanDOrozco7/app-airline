@@ -6,8 +6,8 @@ services:
     image: postgres:alpine
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=mydb
+      - POSTGRES_USER=adminjd
+      - POSTGRES_DB=myairlineapp
       - POSTGRES_PASSWORD=123123
     ports:
       - 5432:6548

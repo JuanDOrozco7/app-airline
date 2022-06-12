@@ -2,16 +2,17 @@ from typing import List
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 import datetime
+from sqlalchemy import cast, Date
 
 from app.catalog.models import Flight
 from app.booking.models import Booking
 from . import schema
 
 async def get_all_catalogs(departureAirportCode : str, arrivalAirportCode : str,
-                           departureDate : datetime.datetime, db_session : Session) -> List[Flight]: 
+                           departureDate : datetime.date, db_session : Session) -> List[Flight]: 
     flights = db_session.query(Flight).filter(Flight.departureAirportCode == departureAirportCode,
                                               Flight.arrivalAirportCode == arrivalAirportCode,
-                                              Flight.departureDate == departureDate).all()
+                                              cast(Flight.departureDate, Date) == departureDate).all()
     return flights
 
 

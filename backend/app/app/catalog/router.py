@@ -14,7 +14,7 @@ api_router = APIRouter(tags = ["catalog"])
 @api_router.get('/catalog/', response_model= List[schema.Catalog])
 async def get_all_catalogs(departureAirportCode : str,
                            arrivalAirportCode : str,
-                           departureDate : datetime.datetime,
+                           departureDate : datetime.date,
                            db_session : Session = Depends(db.get_db)):
     catalogs = await services.get_all_catalogs(departureAirportCode = departureAirportCode,
                                                arrivalAirportCode = arrivalAirportCode,
