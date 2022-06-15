@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import { Button, Grid, Typography, TextField } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-import { Grid } from "@mui/material";
+import { LocalizationProvider, MobileDatePicker } from '@mui/x-date-pickers';
 import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined';
 import FlightLandOutlinedIcon from '@mui/icons-material/FlightLandOutlined';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from "react";
 
 const FlightsSearch = (props) => {
 

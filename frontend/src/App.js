@@ -1,11 +1,8 @@
 import {React, useState} from 'react';
-import { AppBar } from '@mui/material';
-import { Link } from 'react-router-dom';
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useNavigate } from "react-router-dom";
 import './App.css';
 import FlightsSearch from './components/FlightsSearch';
 import FlightsList from './components/FlightsList';
-import { useNavigate } from 'react-router-dom';
 
 export default function App() {
   const [flightsearch, setFlightSearch] = useState([]);
